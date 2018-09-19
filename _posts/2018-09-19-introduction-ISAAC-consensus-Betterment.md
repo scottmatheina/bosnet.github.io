@@ -25,8 +25,11 @@ Therefore, we started to improve and develop on the existing ISAAC consensus pro
 
 As a result, with the principles outlined below, we are developing a better BOScoin.
 *****
+
 ## ISAAC's advanced design principles explanation 
+
 *****
+
 ### 1. Decentralization
 
 Ethereum's chief scientist Vitaly Buterin told us about the [meaning and necessity of decentralization of the blockchain in his blog.](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) He said;
@@ -118,9 +121,9 @@ Assumptions: Transactions are sent by clients before consensus is started, and s
 * Process
   * A client sends a message, that it has a transaction, to the node.
   * Node receives the message and goes to the next process with the transaction inside of the message.
-    * Node checks the format of the transactions whether they are well formed or not. 
+    * Node checks the format of the transactions whether they are well formed or not.
     * If the same transaction is already in the transaction pool, nodes stops this process.
-    * Node validates transaction and checks whether transaction is valid or not. 
+    * Node validates transaction and checks whether transaction is valid or not.
   * Node broadcasts the message to all nodes except the sender.
 
 ### How to select Proposer
@@ -147,7 +150,9 @@ func CalculateProposer(blockHeight int, roundNumber int) string {
 *****
 
 ## Which specific features has there been progress?
+
 ### **1. Improve Hard-fork resist & decentralization**
+
 The blockchain projects, which use POW and emphasize liveness, are Bitcoin and Ethereum. These projects are huge supported by the community.Nonetheless Bitcoin and Ethereum could not avoid Hardforking.
 
 Under the principle that BOScoin network maintains safety, each node that participates in the network can prevent a hard fork and raise the decentralization factor through an algorithm that ensure each node is fairly elected to Proposer.
@@ -156,7 +161,8 @@ Let's compare it to existing cryptocurrency projects. For example, EOS is a DPOS
 
 The BOScoin development team expects that the Proposer algorithm implemented in ISAAC will allow nodes to participate in fair settlement based on round number and block height.
 
-### **2. Improve Expanding open-souce developer's eco system & Concurrency performance** 
+### **2. Improve Expanding open-souce developer's eco system & Concurrency performance**
+
 Cryptocurrency projects have used many different languages for their implementation depending on the specification and background of the project.
 The performance of the blockchain is also important, but the public blockchain should also focus on creating the developer ecosystem.
 
@@ -166,10 +172,12 @@ Golang has provided a variety of libraries for cryptocurrency projects and we de
 We have expanded the opensource global development ecosystem through Golang to encourage the participation of developers from around the world.
 Golang also has the advantage of being able to handle concurrent programming with goroutine and handle many transactions.
 
-### **3.Expansion improvement** 
+### **3.Expansion improvement**
+
 Trust contracts and Congress voting are currently under active development.
 At this time, ISAAC development consideration is based on scalability to smoothly drive Trust Contract and Voting.
 The current ISAAC consensus protocol support transactions only, this next version will extending functionality to Trust Contracts and Congress voting.
 
-## Future work 
+## Future work
+
 Next posting will show you about what is our plan for completion of the proposer election process And what is plan to make testing enviroment for quality control of Boscoin's nework.

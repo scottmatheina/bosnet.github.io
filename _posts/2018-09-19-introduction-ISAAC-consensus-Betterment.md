@@ -1,4 +1,8 @@
-# **Introduction of ISAAC consensus protocol betterments.**
+---
+layout: post
+title:  "Introduction of ISAAC consensus protocol betterments"
+date:   2018-09-19 17:22:05 +0900
+---
 
 # Preface
 
@@ -60,8 +64,85 @@ The BOScoin development team applied a more advanced design to ISAAC on the prin
 *****
 
 # Now, Era of ISAAC consensus protocol.
+
 ## Feature of ISAAC consensus protocol
+
 Assumptions: Transactions are sent by clients before consensus is started, and stored temporarily in the transaction pool of BOScoin network nodes.  
+![ISAAC FLOW](2018-09-19-image/isaac_flow.png)
+*****
+
+## How the consensus protocol works
+
+### ISAAC protocol for consensus based on ballot.
+
+* Ballot : set of valid transactions
+* Four states make nodes reach agreement
+  * INIT -  node will propose or receive a ballot.
+  * SIGN - node will be checking ballot is valid by node itself.
+  * ACCEPT - node will be checking ballot is valid by validators.
+  * ALL CONFIRM - node will confirm block with transactions in ballot.
+* Process
+  * **Network start**
+    * At the beginning of the network, the genesis block saved with block . It's height is 1 and round number is 0.
+    * The node start with INIT state, height 2 and round 0.
+  * **Init**
+    * Timer sets up TIMEOUT_INIT.
+    * The steps to propose ballot are as follows.
+    * If node is proposer of this round broadcasts a ballot (INIT, YES),
+      * Ballot includes valid transactions (only hashes) or empty transaction.
+      * When it broadcasts ballot, node goes to the next state.
+    * If node is not proposer, it waits for and receives ballot (INIT, YES).
+      * When it receives the ballot, node goes to the next state.
+    * When timer ends, node goes to the next state.
+  * **SIGN**
+    * Timer resets and sets up again TIMEOUT_SIGN
+    * Node checks proposed ballot is valid.
+    * Each node receives ballots and when number of B(SIGN, YES/NO) is greater than or equal to 2/3 of validators, the node broadcasts B(ACCEPT, YES/NO).
+      * it is not possible to satisfy above two conditions, node broadcasts B(ACCEPT, EXP).
+    * When the timer expires, node broadcasts B(ACCEPT, EXP).
+    * Node goes to the next state.
+  * **ACCEPT** 
+    * Timer resets and sets up again TIMEOUT_ACCEPT.
+    * Each node receives ballots and moves to the same process with SIGN.
+  * **ALL-CONFIRM**
+    * Node confirms and saves the block with proposed transactions, ballot, even though it is empty.
+    * Node filters invalid transactions in the transaction pool.
+    * Node waits for TIMEOUT_ALLCONFIRM.
+    * It goes to INIT state with height + 1 and round 0.
+
+### Transaction Protocol for sharing transactions to all nodes in the network
+
+* All nodes must validate the transactions in the proposed ballot by itself and vote with the result.
+* Increasing efficiency, only hash of the transaction is included in ballot.
+* Process
+  * A client sends a message, that it has a transaction, to the node.
+  * Node receives the message and goes to the next process with the transaction inside of the message.
+    * Node checks the format of the transactions whether they are well formed or not. 
+    * If the same transaction is already in the transaction pool, nodes stops this process.
+    * Node validates transaction and checks whether transaction is valid or not. 
+  * Node broadcasts the message to all nodes except the sender.
+
+### How to select Proposer
+
+* Proposer will be selected from the algorithm based on block height and round.
+* Block height is last confirm block.
+* Round : A variable used within one block generation process. When some nodes run abnormally, the round needed to select intact node as proposer.
+* Proposer selection process
+  * Sorting validators in a validator's address by alphabetical order.
+  * n = (block height + round number) mod len(validators)
+  * The proposer is n'th validator.
+* Proposer selection method
+
+```golang
+
+func CalculateProposer(blockHeight int, roundNumber int) string {
+    candidates := sort.StringSlice(nr.connectionManager.RoundCandidates())
+    candidates.Sort()
+
+    return candidates[(blockHeight + roundNumber)%len(candidates)]
+}
+```
+
 *****
 
 ## Which specific features has there been progress?

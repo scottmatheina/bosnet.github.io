@@ -24,6 +24,7 @@ We do not doubt the success of the mentioned projects, but they have not been ab
 Therefore, we started to improve and develop on the existing ISAAC consensus protocol, and began to think about the blockchain network structure which is considered more decentralized, faster and more scalable.
 
 As a result, with the principles outlined below, we are developing a better BOScoin.
+
 *****
 
 ## ISAAC's advanced design principles explanation 
@@ -44,6 +45,7 @@ Recently, EOS has been criticized for their use of 21 Block Producers who are re
 Decentralization is one of the most important factors in blockchain. Also, as the days go by, technical support and demand for decentralization of public blockchains are increasing.
 
 So the BOScoin development team is designing our ISAAC protocol with decentralization as a key component.
+
 *****
 
 ### 2. Gradual Open membership
@@ -52,6 +54,7 @@ Congress voting that follows Open Membership is an important part of the BOScoin
 If the blockchain fails because of the nature of the blockchain, it should not roll-back or terminate the network.
 
 Therefore, to increase the number of network nodes gradually in order to access the desired goal in a reliable and verifiable way, the principle of ensuring sufficient operational stability by constructing a quorum, which is a set of nodes, We've been working on this design.
+
 *****
 
 ### 3. Network robustness -  Safety
@@ -64,6 +67,7 @@ In addition, when this agreement is reached, it can be said that the network is 
 Let's take an example where a blockchain network is detached. For example, in Bitcoin, they have created a consensus protocol with the greatest emphasis on  liveness, among the three factors which were safety, liveness and fault tolerance mentioned in the FLP Theorem. As a result, Bitcoin Cash, Bitcoin Gold and Bitcoin Dark, etc, which separated from bitcoin blockchains. On the focusing on liveness, this consequences were happened inevitably.
 
 The BOScoin development team applied a more advanced design to ISAAC on the principle that the nodes must agree on maintaining the robustness of the network, focusing on the finality and safety of the blocks.
+
 *****
 *****
 

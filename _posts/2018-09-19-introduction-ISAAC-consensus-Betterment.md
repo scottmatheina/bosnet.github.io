@@ -76,7 +76,9 @@ The BOScoin development team applied a more advanced design to ISAAC on the prin
 ## Feature of ISAAC consensus protocol
 
 Assumptions: Transactions are sent by clients before consensus is started, and stored temporarily in the transaction pool of BOScoin network nodes.  
+
 ![ISAAC FLOW](2018-09-19-image/isaac_flow.png)
+
 *****
 
 ## How the consensus protocol works

@@ -2,6 +2,7 @@
 layout: post
 title:  "Introduction of ISAAC consensus protocol betterments"
 date:   2018-09-19 17:22:05 +0900
+categories: boscoin consensus protocol
 ---
 
 # Preface

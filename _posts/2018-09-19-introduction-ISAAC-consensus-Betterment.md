@@ -3,6 +3,7 @@ layout: post
 title:  "Introduction of ISAAC consensus protocol betterments"
 # date:   2018-09-19 17:22:05 +0900
 # categories: boscoin consensus protocol
+permalink: /:title:output_ext
 ---
 
 # Preface
@@ -77,7 +78,7 @@ The BOScoin development team applied a more advanced design to ISAAC on the prin
 
 Assumptions: Transactions are sent by clients before consensus is started, and stored temporarily in the transaction pool of BOScoin network nodes.  
 
-![ISAAC FLOW](../2018-09-19-image/isaac_flow.png)
+![ISAAC FLOW](../asset/01_image/isaac_flow.png)
 
 *****
 

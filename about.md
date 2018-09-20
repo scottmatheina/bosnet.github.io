@@ -12,7 +12,7 @@ Welcome to visit.
 
 Early stage of Bitcoin was occurred among the cypherpunks. It had been their own business but now.
 
-Every people, have kept interesting about the crypto currency industry , were sharing their ideas, knowledges, and making highly interconnect global web space on the beyond of open-source spirit.
+People who have kept interesting about the crypto currency industry , were sharing their ideas, knowledges, and making highly interconnect global web space on the beyond of open-source spirit.
 
 Blockchain developers eager to find out share their knowledges , know-hows and etc also. As done like almost of developers.
 

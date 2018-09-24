@@ -6,22 +6,22 @@ permalink: /about/
 
 This is BlockchainOS dev team's technical blog.
 
-Welcome to visit.
+Welcome!
 
 ### **To start with..**
 
-Early stage of Bitcoin was occurred among the cypherpunks. It had been their own business but now.
+Bitcoin originated from the cypherpunk movement, which is based on the free flow of ideas.
 
-People who have kept interesting about the crypto currency industry , were sharing their ideas, knowledges, and making highly interconnect global web space on the beyond of open-source spirit.
+People interested in the crypto-currency industry enjoy sharing their ideas, knowledge, and value having a highly interconnected global community in the true spirit of the open-source and creative commons philosophies.
 
-Blockchain developers eager to find out share their knowledges , know-hows and etc also. As done like almost of developers.
+Blockchain developers, like most developers, are eager to find, and share their knowledge, and know how.
 
-We, BlockchainOS's dev team , happy to share our knowledges , know-hows, trials , (sometimes) challenging stories with people in all around world. This blog posts will be stocked with a lots of informations, stories, and so on.
+We, BlockchainOS's dev team, are happy to share our knowledge, know-how, trials, and (sometimes) challenging stories with people all over world. This blog will be stocked full with lots of information, stories, and other information valuable to the crypto-currency enthusiast. 
 
-Please leave your comments or  appraisals of our posts. It will give us motivation to do more best on work.
+Please leave your comments. It will give us motivation to do great work.
 
-Thank you. see you through postings.
+Thank you.
 
 Regards
 
-BlockchainOS  developers.
+BlockchainOS developers

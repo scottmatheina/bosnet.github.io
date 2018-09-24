@@ -19,10 +19,10 @@ At this time we are pleased to release the design of a more advanced version of 
 
 Since the successful release of the ISAAC consensus protocol, the BOScoin development team has been working hard to improve ISAAC.
 
-We have been researching projects such as EOS, ONTOLOGY TEZOS, and COSMOS, and have been thinking about improving the ISAAC consensus protocol.
+We have been researching projects such as EOS, ONTOLOGY, TEZOS, and COSMOS, and have been thinking about improving the ISAAC consensus protocol.
 We do not doubt the success of the mentioned projects, but they have not been able to give a good answer to the question of decentralization.
 
-Therefore, we started to improve and develop on the existing ISAAC consensus protocol, and began to think about the blockchain network structure which is considered more decentralized, faster and more scalable.
+Therefore, we started to improve and develop on the existing ISAAC consensus protocol, and began to think about the blockchain network structure which is considered more decentralized, faster, and more scalable.
 
 As a result, with the principles outlined below, we are developing a better BOScoin.
 
@@ -34,12 +34,12 @@ As a result, with the principles outlined below, we are developing a better BOSc
 
 ### 1. Decentralization
 
-Ethereum's chief scientist Vitaly Buterin told us about the [meaning and necessity of decentralization of the blockchain in his blog.](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) He said;
+Ethereum's chief scientist Vitalik Buterin told us about the [meaning and necessity of decentralization of the blockchain in his blog.](https://medium.com/@VitalikButerin/the-meaning-of-decentralization-a0c92b76a274) He said;
 
 * Blockchains are politically decentralized and structurally decentralized, but all nodes behave like one computer for a single state.
 * Resistance to network or blockchain failures, resistance to (network) attackers, and (centralized) cartel-forming tolerance within (other than network participants) is why decentralization is necessary.
 
-And also attempt to measure decentralization by using the Nakamoto coefficient index from ["Quantifying Decentralization"](https://news.earn.com/quantifying-decentralization-e39db233c28e) posted by Balaji.S. Srinivasan, CTO of Coinbase .
+And also attempt to measure decentralization by using the Nakamoto coefficient index from ["Quantifying Decentralization"](https://news.earn.com/quantifying-decentralization-e39db233c28e) posted by Balaji.S. Srinivasan, CTO of Coinbase.
 
 Recently, EOS has been criticized for their use of 21 Block Producers who are responsible for the validation of the entire blockchain, distorting the value of decentralization.
 
@@ -65,9 +65,9 @@ If two nodes in the blockchain agree on different conclusions, no consensus is r
 Within the blockchain, nodes that are state replication machines must agree on the same result.
 In addition, when this agreement is reached, it can be said that the network is not divided. In other words, it can be said that the network is healthy. This is related to the last AA.
 
-Let's take an example where a blockchain network is detached. For example, in Bitcoin, they have created a consensus protocol with the greatest emphasis on  liveness, among the three factors which were safety, liveness and fault tolerance mentioned in the FLP Theorem. As a result, Bitcoin Cash, Bitcoin Gold and Bitcoin Dark, etc, which separated from bitcoin blockchains. On the focusing on liveness, this consequences were happened inevitably.
+Let's take an example where a blockchain network is detached. For example, in Bitcoin, they have created a consensus protocol with the greatest emphasis on liveness, among the three factors which were safety, liveness, and fault tolerance mentioned in the FLP Theorem. As a result, Bitcoin Cash, Bitcoin Gold, and Bitcoin Dark separated from the Bitcoin blockchain. On the focusing on liveness, this consequences were happened inevitably.
 
-The BOScoin development team applied a more advanced design to ISAAC on the principle that the nodes must agree on maintaining the robustness of the network, focusing on the finality and safety of the blocks.
+The BOScoin development team applied a more advanced design to ISAAC on the principle that the nodes must agree on maintaining the robustness of the network, focusing on the finality, and safety of the blocks.
 
 *****
 *****
@@ -160,15 +160,15 @@ func CalculateProposer(blockHeight int, roundNumber int) string {
 
 ### **1. Improve Hard-fork resist & decentralization**
 
-The blockchain projects, which use POW and emphasize liveness, are Bitcoin and Ethereum. These projects are huge supported by the community.Nonetheless Bitcoin and Ethereum could not avoid Hardforking.
+The blockchain projects, which use POW and emphasize liveness, are Bitcoin and Ethereum. These projects have huge support from the community, but nonetheless Bitcoin and Ethereum could not avoid Hardforking.
 
 Under the principle that BOScoin network maintains safety, each node that participates in the network can prevent a hard fork and raise the decentralization factor through an algorithm that ensure each node is fairly elected to Proposer.
 
-Let's compare it to existing cryptocurrency projects. For example, EOS is a DPOS algorithm, so it has hard fork resistance, but it is relatively insufficient for consensus participated as independent node.Stellar has successfully implemented decentralization and hard fork resistance through SCP, but it is difficult for new nodes to participate in the consensus due to the node network topology.
+Let's compare it to existing cryptocurrency projects. For example, EOS is a DPOS algorithm, so it has hard fork resistance, but it is relatively insufficient for consensus participated as independent node. Stellar has successfully implemented decentralization and hard fork resistance through SCP, but it is difficult for new nodes to participate in the consensus due to the node network topology.
 
 The BOScoin development team expects that the Proposer algorithm implemented in ISAAC will allow nodes to participate in fair settlement based on round number and block height.
 
-### **2. Improve Expanding open-souce developer's eco system & Concurrency performance**
+### **2. Improve expanding open-source developer's ecosystem & concurrency performance**
 
 Cryptocurrency projects have used many different languages for their implementation depending on the specification and background of the project.
 The performance of the blockchain is also important, but the public blockchain should also focus on creating the developer ecosystem.
@@ -176,15 +176,15 @@ The performance of the blockchain is also important, but the public blockchain s
 On September 6, 2018, the top 100 projects by market cap used c ++ (23) implementation languages ​​and the second most used language was Golang (18).
 Golang has provided a variety of libraries for cryptocurrency projects and we decided that the syntax was simple enough to make the developer ecosystem relatively easy.
 
-We have expanded the opensource global development ecosystem through Golang to encourage the participation of developers from around the world.
+We have expanded the open-source global development ecosystem through Golang to encourage the participation of developers from around the world.
 Golang also has the advantage of being able to handle concurrent programming with goroutine and handle many transactions.
 
 ### **3.Expansion improvement**
 
 Trust contracts and Congress voting are currently under active development.
 At this time, ISAAC development consideration is based on scalability to smoothly drive Trust Contract and Voting.
-The current ISAAC consensus protocol support transactions only, this next version will extending functionality to Trust Contracts and Congress voting.
+The current ISAAC consensus protocol supports transactions only, this next version will extending functionality to Trust Contracts and Congress voting.
 
 ## Future work
 
-Next posting will show you about what is our plan for completion of the proposer election process And what is plan to make testing enviroment for quality control of Boscoin's nework.
+Next posting will show you about what is our plan for completion of the proposer election process, and what is the plan to make a testing enviroment for quality control on the BOScoin nework.
